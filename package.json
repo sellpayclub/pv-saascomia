@@ -2,6 +2,9 @@
   "name": "dominando-saas-ia",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp -r . dist/ || true"
+  },
   "dependencies": {
     "react": "19.0.0",
     "react-dom": "19.0.0",
