@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Hero } from './components/Hero';
-import { LogosCarousel } from './components/LogosCarousel';
-import { Comparison } from './components/Comparison';
-import { Methodology } from './components/Methodology';
-import { Projects } from './components/Projects';
-import { Recurrence } from './components/Recurrence';
-import { TargetAudience } from './components/TargetAudience';
-import { Instructor } from './components/Instructor';
-import { Pricing } from './components/Pricing';
-import { FAQ } from './components/FAQ';
-import { Footer } from './components/Footer';
-import { MatrixBackground } from './components/MatrixBackground';
-import { MoneyRain } from './components/MoneyRain';
+import { Hero } from './components/Hero.tsx';
+import { LogosCarousel } from './components/LogosCarousel.tsx';
+import { Comparison } from './components/Comparison.tsx';
+import { Methodology } from './components/Methodology.tsx';
+import { Projects } from './components/Projects.tsx';
+import { Recurrence } from './components/Recurrence.tsx';
+import { TargetAudience } from './components/TargetAudience.tsx';
+import { Instructor } from './components/Instructor.tsx';
+import { Pricing } from './components/Pricing.tsx';
+import { FAQ } from './components/FAQ.tsx';
+import { Footer } from './components/Footer.tsx';
+import { MatrixBackground } from './components/MatrixBackground.tsx';
+import { MoneyRain } from './components/MoneyRain.tsx';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronUp } from 'lucide-react';
 
@@ -20,11 +20,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
-        setShowScrollTop(true);
-      } else {
-        setShowScrollTop(false);
-      }
+      setShowScrollTop(window.scrollY > 400);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -36,11 +32,11 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-slate-200 selection:bg-cyan-500 selection:text-black overflow-x-hidden font-inter">
-      {/* Background Effects */}
-      <div className="fixed inset-0 z-0 opacity-15 pointer-events-none">
+      {/* Background Effects - Reduzida opacidade para garantir contraste */}
+      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
         <MatrixBackground />
       </div>
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-30">
         <MoneyRain />
       </div>
 

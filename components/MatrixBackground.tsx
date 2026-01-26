@@ -18,20 +18,30 @@ export const MatrixBackground: React.FC = () => {
     updateSize();
 
     const letters = '01SAASIA01$$$CodeDev'.split('');
-    const fontSize = 14;
+    const fontSize = 16;
     let columns = Math.floor(canvas.width / fontSize);
     let drops: number[] = new Array(columns).fill(1);
 
     const draw = () => {
       if (!ctx) return;
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      
+      // Efeito de trail (rastro) suave
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#0ea5e9'; // Cyan color
-      ctx.font = `${fontSize}px monospace`;
+      ctx.fillStyle = 'rgba(14, 165, 233, 0.4)'; // Azul Cyan futurista
+      ctx.font = `bold ${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const text = letters[Math.floor(Math.random() * letters.length)];
+        
+        // Letra brilhante na ponta
+        if (Math.random() > 0.95) {
+          ctx.fillStyle = '#fff';
+        } else {
+          ctx.fillStyle = 'rgba(14, 165, 233, 0.5)';
+        }
+
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -41,7 +51,7 @@ export const MatrixBackground: React.FC = () => {
       }
     };
 
-    const interval = setInterval(draw, 33);
+    const interval = setInterval(draw, 33); // 30fps aprox
 
     const handleResize = () => {
       updateSize();
@@ -57,5 +67,11 @@ export const MatrixBackground: React.FC = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="fixed inset-0 block w-full h-full pointer-events-none" style={{ background: 'transparent' }} />;
+  return (
+    <canvas 
+      ref={canvasRef} 
+      className="fixed inset-0 w-full h-full pointer-events-none" 
+      style={{ background: 'transparent', zIndex: -1 }} 
+    />
+  );
 };
