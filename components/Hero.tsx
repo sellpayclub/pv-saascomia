@@ -29,11 +29,11 @@ export const Hero: React.FC = () => {
              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
           </div>
 
-          <h1 className="relative z-10 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-space tracking-tight text-white drop-shadow-[0_10px_10px_rgba(0,0,0,1)] [text-shadow:0px_0px_20px_rgba(0,0,0,1),0px_0px_40px_rgba(0,0,0,1),0px_5px_10px_rgba(0,0,0,1)]">
+          <h1 className="relative z-10 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-space tracking-tight text-white headline-shadow">
             Crie um SAAS com IA em 1 dia — mesmo sem saber programar.
           </h1>
           
-          <p className="relative z-10 text-xl md:text-2xl text-slate-300 font-light border-l-4 border-cyan-500 pl-6 leading-relaxed bg-black/30 backdrop-blur-sm rounded-r-lg py-2">
+          <p className="relative z-10 text-xl md:text-2xl text-slate-300 font-light border-l-4 border-cyan-500 pl-6 leading-relaxed bg-black/40 backdrop-blur-sm rounded-r-lg py-2">
             construa uma renda recorrente que pode chegar a <span className="text-green-400 font-bold">10k/mês</span> em até 30 dias
           </p>
 

@@ -15,9 +15,9 @@ export const Instructor: React.FC = () => {
                 className="w-full h-full object-cover transition-all duration-500"
              />
              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
-             <div className="absolute bottom-4 left-4 drop-shadow-[0_10px_10px_rgba(0,0,0,1)]">
-                 <h3 className="text-2xl font-bold text-white font-space [text-shadow:0_0_15px_rgba(0,0,0,1),0_0_30px_rgba(0,0,0,1)]">Daniel Paixão</h3>
-                 <p className="text-cyan-500 font-mono text-sm font-bold [text-shadow:0_0_15px_rgba(0,0,0,1),0_0_30px_rgba(0,0,0,1)]">Especialista em Marketing Digital e IA</p>
+             <div className="absolute bottom-4 left-4">
+                 <h3 className="text-2xl font-bold text-white font-space specialist-shadow">Daniel Paixão</h3>
+                 <p className="text-cyan-500 font-mono text-sm font-bold specialist-shadow">Especialista em Marketing Digital e IA</p>
              </div>
           </div>
           {/* Decorative Elements behind */}
