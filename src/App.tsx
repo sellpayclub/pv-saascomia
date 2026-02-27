@@ -11,8 +11,8 @@ import {
   Pricing, 
   FAQ, 
   Footer, 
-  MatrixBackground, 
-  MoneyRain 
+  MatrixBg, 
+  MoneyEffect 
 } from '@/components';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronUp } from 'lucide-react';
@@ -36,10 +36,10 @@ const App: React.FC = () => {
     <div className="relative min-h-screen bg-black text-slate-200 selection:bg-cyan-500 selection:text-black overflow-x-hidden font-inter">
       {/* Background Effects - Reduzida opacidade para garantir contraste */}
       <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
-        <MatrixBackground />
+        <MatrixBg />
       </div>
       <div className="fixed inset-0 z-0 pointer-events-none opacity-30">
-        <MoneyRain />
+        <MoneyEffect />
       </div>
 
       <main className="relative z-10 flex flex-col gap-0">

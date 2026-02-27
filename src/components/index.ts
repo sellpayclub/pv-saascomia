@@ -9,5 +9,5 @@ export * from './Instructor';
 export * from './Pricing';
 export * from './FAQ';
 export * from './Footer';
-export * from './MatrixBackground';
-export * from './MoneyRain';
+export * from './MatrixBg';
+export * from './MoneyEffect';
