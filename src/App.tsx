@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Hero } from './components/Hero';
-import { LogosCarousel } from './components/LogosCarousel';
-import { Comparison } from './components/Comparison';
-import { Methodology } from './components/Methodology';
-import { Projects } from './components/Projects';
-import { Recurrence } from './components/Recurrence';
-import { TargetAudience } from './components/TargetAudience';
-import { Instructor } from './components/Instructor';
-import { Pricing } from './components/Pricing';
-import { FAQ } from './components/FAQ';
-import { Footer } from './components/Footer';
-import { MatrixBackground } from './components/MatrixBackground';
-import { MoneyRain } from './components/MoneyRain';
+import { 
+  Hero, 
+  LogosCarousel, 
+  Comparison, 
+  Methodology, 
+  Projects, 
+  Recurrence, 
+  TargetAudience, 
+  Instructor, 
+  Pricing, 
+  FAQ, 
+  Footer, 
+  MatrixBackground, 
+  MoneyRain 
+} from '@/components';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronUp } from 'lucide-react';
 
