@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, ShieldCheck, Gift, Lock, Zap } from 'lucide-react';
+import { Check, ShieldCheck, Lock, Zap } from 'lucide-react';
 
 export const Pricing: React.FC = () => {
   const handleCheckout = () => {
@@ -13,51 +13,74 @@ export const Pricing: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             
-            {/* Bonus Section */}
-            <div className="bg-slate-900/50 border border-slate-700 rounded-3xl p-6 md:p-8 flex flex-col justify-center order-2 md:order-1 backdrop-blur-sm">
-                <div className="inline-flex items-center gap-2 text-yellow-400 font-bold mb-6">
-                    <Gift size={24} />
-                    <span>🎁 BÔNUS EXCLUSIVO</span>
+            {/* Plan 1 */}
+            <div className="bg-slate-900/50 border border-slate-700 rounded-3xl p-8 flex flex-col order-2 md:order-1 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold mb-2 font-space text-white">Plano Básico</h3>
+                <p className="text-slate-400 mb-6">Ideal para começar</p>
+                
+                <div className="mb-6">
+                    <div className="flex items-end gap-2">
+                        <span className="text-4xl text-white font-bold">R$ 29,90</span>
+                    </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 font-space">SAAS SECRETOS E VALIDADOS</h3>
-                <ul className="space-y-4 mb-8">
-                    <li className="flex items-center gap-3 text-slate-300">
-                        <Check className="text-green-500" size={18} /> Sistemas prontos
-                    </li>
-                    <li className="flex items-center gap-3 text-slate-300">
-                        <Check className="text-green-500" size={18} /> Já testados
-                    </li>
-                    <li className="flex items-center gap-3 text-slate-300">
-                        <Check className="text-green-500" size={18} /> Alguns já gerando lucro
+
+                <ul className="space-y-4 mb-8 flex-1">
+                    <li className="flex items-start gap-3 text-slate-300">
+                        <Check className="text-cyan-500 shrink-0 mt-1" size={18} /> 
+                        <span>Apenas o curso básico com aulas</span>
                     </li>
                 </ul>
-                <div className="mt-auto p-4 bg-yellow-900/20 border border-yellow-600/30 rounded-xl text-yellow-200 text-sm font-bold text-center">
-                    👉 Para você copiar, adaptar e vender
-                </div>
+
+                <button 
+                    onClick={handleCheckout}
+                    className="w-full py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold text-lg rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
+                >
+                    COMEÇAR AGORA
+                </button>
             </div>
 
-            {/* Main Offer */}
+            {/* Plan 2 */}
             <motion.div 
                 whileHover={{ scale: 1.02 }}
-                className="bg-black border-2 border-cyan-500 rounded-3xl p-2 shadow-[0_0_50px_rgba(6,182,212,0.2)] order-1 md:order-2"
+                className="bg-black border-2 border-green-500 rounded-3xl p-2 shadow-[0_0_50px_rgba(34,197,94,0.2)] order-1 md:order-2"
             >
-                <div className="bg-slate-900 h-full rounded-2xl p-8 text-center flex flex-col relative overflow-hidden">
-                    <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-cyan-400 to-green-400" />
+                <div className="bg-slate-900 h-full rounded-2xl p-8 flex flex-col relative overflow-hidden">
+                    <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-green-400 to-cyan-400" />
+                    <div className="absolute top-0 right-0 bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        MAIS VENDIDO
+                    </div>
                     
-                    <h3 className="text-xl text-slate-400 uppercase tracking-widest mb-2">💰 OFERTA</h3>
-                    <h2 className="text-3xl font-bold font-space text-white mb-6">Acesso completo ao Dominando SAAS IA</h2>
+                    <h3 className="text-2xl font-bold font-space text-white mb-2">Plano Completo</h3>
+                    <p className="text-slate-400 mb-6">Acesso total ao método</p>
 
-                    <div className="my-6">
-                        <p className="text-red-500 line-through text-lg">🔥 Valor normal: R$ 597/ano</p>
-                        <div className="flex flex-col items-center justify-center gap-2 mt-2">
-                            <span className="text-4xl text-green-500 font-bold">⚡ Hoje: R$ 97</span>
-                            <span className="text-sm text-slate-400">à vista!</span>
+                    <div className="mb-6">
+                        <div className="flex items-end gap-2">
+                            <span className="text-4xl text-green-500 font-bold">R$ 49,90</span>
                         </div>
                     </div>
 
+                    <ul className="space-y-4 mb-8 flex-1">
+                        <li className="flex items-start gap-3 text-slate-300">
+                            <Check className="text-green-500 shrink-0 mt-1" size={18} /> 
+                            <span>Curso completo</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-slate-300">
+                            <Check className="text-green-500 shrink-0 mt-1" size={18} /> 
+                            <span>Sistemas prontos para copiar</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-slate-300">
+                            <Check className="text-green-500 shrink-0 mt-1" size={18} /> 
+                            <span>Mentoria ao vivo</span>
+                        </li>
+                        <li className="flex items-start gap-3 text-slate-300">
+                            <Check className="text-green-500 shrink-0 mt-1" size={18} /> 
+                            <span>Ferramentas gratuitas</span>
+                        </li>
+                    </ul>
+
                     <button 
                         onClick={handleCheckout}
-                        className="w-full py-4 bg-green-500 hover:bg-green-400 text-black font-bold text-xl rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.5)] transition-all mb-4 flex items-center justify-center gap-2 cursor-pointer"
+                        className="w-full py-4 bg-green-500 hover:bg-green-400 text-black font-bold text-lg rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.5)] transition-all mb-4 flex items-center justify-center gap-2 cursor-pointer"
                     >
                         <Zap fill="black" size={20} /> QUERO MEU ACESSO AGORA
                     </button>

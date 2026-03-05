@@ -30,16 +30,12 @@ export const Hero: React.FC = () => {
           </div>
 
           <h1 className="relative z-10 text-3xl md:text-5xl lg:text-6xl font-bold leading-tight font-space tracking-tight text-white headline-shadow">
-            Crie um SAAS com IA em 1 dia — mesmo sem saber programar.
+            Aprenda Criar uma renda recorrente de <span className="text-green-400">10k/mês em até 30 dias</span> vendendo aplicativos feitos por IA!
           </h1>
-          
-          <p className="relative z-10 text-lg md:text-2xl text-slate-300 font-light border-l-4 border-cyan-500 pl-4 md:pl-6 leading-relaxed bg-black/40 backdrop-blur-sm rounded-r-lg py-2">
-            construa uma renda recorrente que pode chegar a <span className="text-green-400 font-bold">10k/mês</span> em até 30 dias
-          </p>
 
-          <div className="flex flex-col gap-3 border-t border-slate-800 pt-6 relative z-10">
+          <div className="flex flex-col gap-3 border-t border-slate-800 pt-6 relative z-10 mt-8">
              <div className="flex items-center gap-3 text-slate-300 font-mono text-sm md:text-base">
-                <span className="text-cyan-500">👉</span> Sem código. Sem teoria. Sem achismo.
+                <span className="text-cyan-500">👉</span> Sem código. Sem teoria.
              </div>
              <div className="flex items-center gap-3 text-slate-300 font-mono text-sm md:text-base">
                 <span className="text-cyan-500">👉</span> Copie exatamente o que eu faço e aplique.
